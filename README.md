@@ -6,6 +6,8 @@ Originally developed in 2021 by Joe Cummings (@joecummings) and Jacob Lichtefeld
 
 [Named entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) (NER) is a very important and long-standing goal of the NLP community. In it, we attempt to identify and categorize "entities" from text so that we can use them for downstream processing such as argument attachment or [event extraction](http://ceur-ws.org/Vol-779/derive2011_submission_1.pdf).
 
+If you've never worked with NER before [SpaCy's EntityRecognizer](https://spacy.io/api/entityrecognizer) may be a place to start. This project includes SpaCy in the python requirements by default.
+
 ## Task: Build a web application that can take in text and return named entities.
 
 ```
