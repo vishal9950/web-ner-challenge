@@ -23,10 +23,10 @@ Because we don't aim to test you on project setup, we have provided templates th
    * In case you don't have Node.js or npm installed, refer to the NodeSource blog posts [Installing Node.js Tutorial: Using nvm](https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/) (macOS and Ubuntu) or [Installing Node.js Tutorial: Windows](https://nodesource.com/blog/installing-nodejs-tutorial-windows/) (Windows) for instructions.
 2. We also recommend setting up a virtual environment for the Python dependencies. A good one is [Miniconda](https://docs.conda.io/en/latest/miniconda.html), which you can then use in a manner similar to the following code snippet:
   ```
-  conda create --name web-ner python=3.7
+  conda create --name web-ner python=3.8
   ```
-3. Run `make install FRONTEND=react-frontend BACKEND=flask-backend`
-4. Run `make start FRONTEND=react-frontend BACKEND=flask-backend`
+3. Run `make install FRONTEND=angular-frontend BACKEND=flask-backend`
+4. Run `make start FRONTEND=angular-frontend BACKEND=flask-backend`
 
 ### Judging criteria:
 * **Code quality** - We want to know that you are capable of writing production-level code involving machine learning material.
