@@ -6,6 +6,6 @@ ors = CORS(app)
 app.config["CORS_HEADERS"] = "Content-Type"
 
 
-@app.route("/")
-def hello_world():
-    return "Hello World!"
+@app.route("/health_check")
+def health_check():
+    return "Ok!"
