@@ -29,8 +29,8 @@ Because we don't aim to test you on project setup, we have provided templates th
   ```
   conda create --name web-ner python=3.8
   ```
-3. Run `make install FRONTEND=angular-frontend BACKEND=flask-backend`
-4. Run `make start FRONTEND=angular-frontend BACKEND=flask-backend`
+3. Run `make install FRONTEND=react-frontend BACKEND=flask-backend`
+4. Run `make start FRONTEND=react-frontend BACKEND=flask-backend`
 
 ### Judging criteria:
 * **Code quality** - We want to know that you are capable of writing production-level code involving machine learning material.
@@ -38,6 +38,20 @@ Because we don't aim to test you on project setup, we have provided templates th
 * **Accuracy of model** - The model you choose to use should be able to cover the very basics, like recognizing `the United States` as a GPE. We just want to know that whatever model you choose or implement works.
 * **Creativity** - This is a catch-all category for whatever else you want to incorporate to show off your skills. Some examples could be implementing more entity types or other linguistic features, creating a more visually appealing interface, creating an option to use a different language, or adding better error handling. This is your time to shine.
 
-![Example app](./assets/web_ner_example.png)
+### Screenshots:
+
+English Results Collapsed
+![English Results Collapsed](./assets/web-ner-english-collapsed.png)
+
+English Results
+![English Results](./assets/web-ner-english.png)
+
+French Results
+![English Results](./assets/web-ner-french.png)
+
+No Results
+![English Results](./assets/web-ner-error.png)
 
 > If you have any questions/comments while working on this, please reach out to your contact at ISI.
+
+> Reach out to me on https://linktr.ee/vishalvasnani and vasnani@usc.edu
