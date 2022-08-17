@@ -21,10 +21,17 @@
     text-align: left;
 }
 
+.LandingPage-output-text {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
 .LandingPage-select {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60px;
 }
 
 .Language-select {
@@ -67,4 +74,9 @@
     flex-direction: column;
     height: 100%;
     padding: 0px 10px;
+    overflow: scroll;
+}
+
+.LandingPage-accordion {
+    overflow: scroll;
 }

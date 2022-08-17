@@ -1,0 +1,21 @@
+li { 
+    background: #efefef; 
+    text-align: left;
+    padding:5px 10px;
+}
+
+li:nth-child(odd) { 
+    background: white; 
+    text-align: left;
+    padding:5px 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.accordion-body {
+    padding: 0px;
+}

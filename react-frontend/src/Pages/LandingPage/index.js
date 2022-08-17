@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import AccordionComponent from '../../Components/Accordion';
 import Header from '../../Components/Header';
 import { getNERFromText, languageMap } from '../../helpers';
 import './index.css';
@@ -7,6 +8,7 @@ import './index.css';
 function LandingPage() {
   const [input, setInput] = useState('');
   const [language, setLanguage] = useState({ value: 'en', label: 'English' });
+  const [nerData, serNerData] = useState();
 
   const handleTextChange = (event) => {
     setInput(event.target.value);
@@ -14,7 +16,7 @@ function LandingPage() {
 
   const handleGenerateNER = async () => {
     const res = await getNERFromText(input, language.value);
-    console.log('in body-->', res);
+    serNerData(res);
   };
 
   const handleLanguageChange = (selectedLanguage) => {
@@ -37,7 +39,17 @@ function LandingPage() {
         <div className="LandingPage-button-container">
           <button onClick={handleGenerateNER} disabled={input.length === 0} className={input.length === 0 ? 'LandingPage-button-disabled' : 'LandingPage-button'} type="submit">Generate NER</button>
         </div>
-        <div className="LandingPage-output">Named Entity Recognition</div>
+        <div className="LandingPage-output">
+          <div className="LandingPage-output-text">
+            Named Entity Recognition
+          </div>
+
+          {nerData && (
+          <div className="LandingPage-accordion">
+            <AccordionComponent data={nerData} />
+          </div>
+          )}
+        </div>
       </div>
     </div>
   );
