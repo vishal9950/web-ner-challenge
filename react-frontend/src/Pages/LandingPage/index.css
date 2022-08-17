@@ -1,0 +1,55 @@
+.LandingPage-outer-container {
+    height: 80%;
+}
+
+.LandingPage-container {
+    display: flex;
+    padding: 20px;
+    height: 100%;
+}
+
+.LandingPage-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0px 10px;
+}
+
+.LandingPage-input-box {
+    margin-top: 10px;
+    height: 100%;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.LandingPage-button-container {
+    align-self: center;
+}
+
+.LandingPage-button {
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.LandingPage-button-disabled {
+    background-color: gray;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.LandingPage-output {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0px 10px;
+}
