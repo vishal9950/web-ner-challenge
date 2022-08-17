@@ -46,6 +46,7 @@ def entities():
     for ent in model_results.ents:
         if ent.label_ not in return_result:
             return_result[ent.label_] = []
-        return_result[ent.label_].append(ent.text)
+        if ent.text not in return_result[ent.label_]:
+            return_result[ent.label_].append(ent.text)
 
     return jsonify(return_result)
