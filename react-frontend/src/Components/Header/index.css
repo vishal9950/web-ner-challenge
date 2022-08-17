@@ -1,0 +1,23 @@
+.Header-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: black;
+    color: white;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+}
+
+.Header-title {
+    display: flex;
+    flex: 1;
+}
+
+.Header-link-text {
+    color: white;
+}
+
+.Header-link-icon {
+    font-size: 15px;
+}
