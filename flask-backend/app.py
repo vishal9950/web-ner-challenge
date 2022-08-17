@@ -1,4 +1,4 @@
-from flask import Flask, abort, request
+from flask import Flask, abort, jsonify, request
 from flask_cors import CORS
 from numpy import equal
 import spacy
@@ -28,12 +28,24 @@ def entities():
     """
     language = request.json["language"];
     text = request.json["text"];
+    return_result = dict()
     
     spacy_lang_model = language_switcher(language)
 
     if(spacy_lang_model == "Language Not Supported!"):
         # case where input language is not supported
-        return abort(400)
+        return abort(400) # bad request
     
     nlp = spacy.load(language_switcher(language))
-    return language_switcher(language)
+    model_results = nlp(text)
+
+    if not model_results.ents:
+        # case when no NER are found
+        return jsonify({})
+
+    for ent in model_results.ents:
+        if ent.label_ not in return_result:
+            return_result[ent.label_] = []
+        return_result[ent.label_].append(ent.text)
+
+    return jsonify(return_result)
