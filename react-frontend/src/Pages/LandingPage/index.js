@@ -45,9 +45,11 @@ function LandingPage() {
           </div>
 
           {nerData && (
-          <div className="LandingPage-accordion">
-            <AccordionComponent data={nerData} />
-          </div>
+            Object.keys(nerData).length > 0 ? (
+              <div className="LandingPage-accordion">
+                <AccordionComponent data={nerData} />
+              </div>
+            ) : <div className="LandingPage-error">No entities found!</div>
           )}
         </div>
       </div>

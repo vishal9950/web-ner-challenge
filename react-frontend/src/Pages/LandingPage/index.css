@@ -80,3 +80,9 @@
 .LandingPage-accordion {
     overflow: scroll;
 }
+
+.LandingPage-error {
+    background-color: rgb(176, 38, 38);
+    color: white;
+    padding: 10px;
+}
